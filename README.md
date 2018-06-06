@@ -21,7 +21,7 @@ mvn dependency:copy-dependencies
 完整的依赖树如下：
 
 ```bash
-[INFO] org.codingtoy:ouip-cloud-runtime:pom:0.0.1-SNAPSHOT
+[INFO] org.reap:reap-cloud-runtime:pom:0.0.1-SNAPSHOT
 [INFO] +- org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.0.0.M8:compile
 [INFO] |  +- org.springframework.cloud:spring-cloud-starter:jar:2.0.0.M9:compile
 [INFO] |  |  +- org.springframework.cloud:spring-cloud-context:jar:2.0.0.M9:compile
