@@ -16,6 +16,7 @@ mvn dependency:copy-dependencies
 - *org.springframework.cloud/spring-cloud-starter-config* 
 - *org.springframework.boot/spring-boot-starter-web*
 - *org.springframework.boot/spring-boot-starter-data-jpa*
+- *org.springframework.boot/spring-boot-starter-actuator*
 - *org.springframework.boot/spring-boot-configuration-processor*
 
 完整的依赖树如下：
@@ -77,7 +78,6 @@ mvn dependency:copy-dependencies
 [INFO] |  |  |  |  +- io.reactivex:rxnetty-contexts:jar:0.4.9:runtime
 [INFO] |  |  |  |  \- io.reactivex:rxnetty-servo:jar:0.4.9:runtime
 [INFO] |  |  |  +- com.netflix.hystrix:hystrix-core:jar:1.5.12:runtime
-[INFO] |  |  |  |  \- org.hdrhistogram:HdrHistogram:jar:2.1.9:runtime
 [INFO] |  |  |  \- io.reactivex:rxnetty:jar:0.4.9:runtime
 [INFO] |  |  |     +- io.netty:netty-codec-http:jar:4.1.23.Final:runtime
 [INFO] |  |  |     |  \- io.netty:netty-codec:jar:4.1.23.Final:runtime
@@ -99,10 +99,7 @@ mvn dependency:copy-dependencies
 [INFO] |  \- com.thoughtworks.xstream:xstream:jar:1.4.10:compile
 [INFO] |     +- xmlpull:xmlpull:jar:1.1.3.1:compile
 [INFO] |     \- xpp3:xpp3_min:jar:1.1.4c:compile
-[INFO] +- org.springframework.cloud:spring-cloud-starter-config:jar:2.0.0.M9:compile
-[INFO] |  +- org.springframework.cloud:spring-cloud-config-client:jar:2.0.0.M9:compile
-[INFO] |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.9.3:compile
-[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.0.1.RELEASE:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:2.0.1.RELEASE:compile
 [INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.0.1.RELEASE:compile
 [INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.0.1.RELEASE:compile
 [INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.0.1.RELEASE:compile
@@ -115,9 +112,19 @@ mvn dependency:copy-dependencies
 [INFO] |  |  +- org.springframework:spring-core:jar:5.0.5.RELEASE:compile
 [INFO] |  |  |  \- org.springframework:spring-jcl:jar:5.0.5.RELEASE:compile
 [INFO] |  |  \- org.yaml:snakeyaml:jar:1.19:runtime
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.0.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-actuator:jar:2.0.1.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-context:jar:5.0.5.RELEASE:compile
+[INFO] |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.3:compile
+[INFO] |  \- io.micrometer:micrometer-core:jar:1.0.3:compile
+[INFO] |     +- org.hdrhistogram:HdrHistogram:jar:2.1.10:compile
+[INFO] |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
+[INFO] +- org.springframework.cloud:spring-cloud-starter-config:jar:2.0.0.M9:compile
+[INFO] |  +- org.springframework.cloud:spring-cloud-config-client:jar:2.0.0.M9:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.9.3:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.0.1.RELEASE:compile
 [INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.0.1.RELEASE:compile
 [INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.3:compile
-[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.3:compile
 [INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.3:compile
 [INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.1.RELEASE:compile
 [INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.29:compile
@@ -131,7 +138,6 @@ mvn dependency:copy-dependencies
 [INFO] |  |  \- org.springframework:spring-beans:jar:5.0.5.RELEASE:compile
 [INFO] |  \- org.springframework:spring-webmvc:jar:5.0.5.RELEASE:compile
 [INFO] |     +- org.springframework:spring-aop:jar:5.0.5.RELEASE:compile
-[INFO] |     +- org.springframework:spring-context:jar:5.0.5.RELEASE:compile
 [INFO] |     \- org.springframework:spring-expression:jar:5.0.5.RELEASE:compile
 [INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.0.1.RELEASE:compile
 [INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.0.1.RELEASE:compile
@@ -152,4 +158,5 @@ mvn dependency:copy-dependencies
 [INFO] |  |  +- org.springframework:spring-orm:jar:5.0.5.RELEASE:compile
 [INFO] |  |  \- org.springframework:spring-tx:jar:5.0.5.RELEASE:compile
 [INFO] |  \- org.springframework:spring-aspects:jar:5.0.5.RELEASE:compile
-[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.0.1.RELEASE:compile (optional)
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.0.1.RELEASE:compile (optional) 
+```
