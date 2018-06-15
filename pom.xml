@@ -34,6 +34,10 @@
 		<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
+		<dependency>
+          <groupId>io.zipkin.zipkin2</groupId>
+          <artifactId>zipkin</artifactId>
         </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
