@@ -14,6 +14,7 @@ mvn dependency:copy-dependencies
 
 - *org.springframework.cloud/spring-cloud-starter-netflix-eureka-client* 
 - *org.springframework.cloud/spring-cloud-starter-config* 
+- *org.springframework.cloud/spring-cloud-starter-zipkin*
 - *org.springframework.boot/spring-boot-starter-web*
 - *org.springframework.boot/spring-boot-starter-data-jpa*
 - *org.springframework.boot/spring-boot-starter-actuator*
@@ -104,7 +105,6 @@ mvn dependency:copy-dependencies
 [INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.0.1.RELEASE:compile
 [INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.0.1.RELEASE:compile
 [INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.3:compile
-[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
 [INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.10.0:compile
 [INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.10.0:compile
 [INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
@@ -158,5 +158,26 @@ mvn dependency:copy-dependencies
 [INFO] |  |  +- org.springframework:spring-orm:jar:5.0.5.RELEASE:compile
 [INFO] |  |  \- org.springframework:spring-tx:jar:5.0.5.RELEASE:compile
 [INFO] |  \- org.springframework:spring-aspects:jar:5.0.5.RELEASE:compile
+[INFO] +- org.springframework.cloud:spring-cloud-starter-zipkin:jar:2.0.0.M9:compile
+[INFO] |  +- org.springframework.cloud:spring-cloud-starter-sleuth:jar:2.0.0.M9:compile
+[INFO] |  |  \- org.springframework.cloud:spring-cloud-sleuth-core:jar:2.0.0.M9:compile
+[INFO] |  |     +- org.aspectj:aspectjrt:jar:1.8.13:compile
+[INFO] |  |     +- io.zipkin.brave:brave:jar:4.18.2:compile
+[INFO] |  |     +- io.zipkin.brave:brave-context-log4j2:jar:4.18.2:compile
+[INFO] |  |     +- io.zipkin.brave:brave-instrumentation-spring-web:jar:4.18.2:compile
+[INFO] |  |     |  \- io.zipkin.brave:brave-instrumentation-http:jar:4.18.2:compile
+[INFO] |  |     +- io.zipkin.brave:brave-instrumentation-spring-rabbit:jar:4.18.2:compile
+[INFO] |  |     +- io.zipkin.brave:brave-instrumentation-kafka-clients:jar:4.18.2:compile
+[INFO] |  |     +- io.zipkin.brave:brave-instrumentation-httpclient:jar:4.18.2:compile
+[INFO] |  |     +- io.zipkin.brave:brave-instrumentation-httpasyncclient:jar:4.18.2:compile
+[INFO] |  |     \- io.zipkin.brave:brave-instrumentation-spring-webmvc:jar:4.18.2:compile
+[INFO] |  |        \- io.zipkin.brave:brave-instrumentation-servlet:jar:4.18.2:compile
+[INFO] |  \- org.springframework.cloud:spring-cloud-sleuth-zipkin:jar:2.0.0.M9:compile
+[INFO] |     +- io.zipkin.reporter2:zipkin-reporter:jar:2.5.0:compile
+[INFO] |     +- io.zipkin.reporter2:zipkin-sender-kafka11:jar:2.5.0:compile
+[INFO] |     \- io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.5.0:compile
+[INFO] +- io.zipkin.zipkin2:zipkin:jar:2.9.3:compile
+[INFO] +- net.logstash.logback:logstash-logback-encoder:jar:4.6:compile
+[INFO] |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
 [INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.0.1.RELEASE:compile (optional) 
 ```
